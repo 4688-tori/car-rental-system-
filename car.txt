@@ -1,0 +1,37 @@
+package car.rental.system; 
+
+
+public class car {
+    private String plateNumber;
+    private String model;
+    private boolean isAvailable;
+    
+    public Car(String plateNumber,String model) {
+        this.plateNumber=plateNumber;
+        this.model=model; 
+        this.isAvailable=true;
+        
+ 
+    }
+    public String getplateNumber(){
+        return plateNumber;
+    }
+    public String getModel(){    
+        return model;
+    }
+    public boolean isAvailable(){
+        return isAvailable;
+    }
+    public void rent(){
+        isAvailable= false;
+    }
+    public void returnCar(){
+        isAvailable=true;
+    }
+    @Override
+    public String toString(){
+        return model +"("+ plateNumber +")-" +(isAvailable? "Available":"Rented");
+                
+    }
+    
+}

@@ -1,0 +1,30 @@
+package car.rental.system;
+
+
+public class Customer {
+    private String name;
+    private String id;
+
+    // Constructor
+    public Customer(String name, String id) {
+        this.name = name;
+        this.id = id;
+    }
+
+    // Getter for name
+    public String getName() {
+        return name;
+    }
+
+    // Getter for id
+    public String getId() {
+        return id;
+    }
+
+    // Optionally, you can add toString(), setters, etc.
+    @Override
+    public String toString() {
+        return "Customer{name='" + name + "', id='" + id + "'}";
+    }
+}
+

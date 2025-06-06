@@ -1,0 +1,25 @@
+ublic class Main {
+    public static void main(String[] args) {
+        RentalAgency agency = new RentalAgency("QuickCar Rentals");
+
+        Car car1 = new Car("C001");
+        Car car2 = new Car("C002");
+        Customer cust1 = new Customer("U001", "Alice");
+        Customer cust2 = new Customer("U002", "Bob");
+
+        agency.addCar(car1);
+        agency.addCar(car2);
+        agency.addCustomer(cust1);
+        agency.addCustomer(cust2);
+
+        agency.listCars();
+        agency.listCustomers();
+
+        agency.rentCar("C001", "U001"); // ✅ Should succeed
+        agency.rentCar("C001", "U002"); // ❌ Already rented
+        agency.rentCar("C003", "U001"); // ❌ Car not found
+        agency.rentCar("C002", "U999"); // ❌ Customer not found
+
+        agency.listCars();
+    }
+}
